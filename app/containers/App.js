@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import './App.css';
+import style from './App.css';
 
 class App extends React.Component {
   constructor() {
@@ -30,12 +30,12 @@ class App extends React.Component {
 
   displayTodos = () => {
     const todos = this.state.todos.map((todo, index) => {
+      const completed = todo.completed !== null ? style.tododiv : style.completed
       return (
-        <div key={'todo' + index} className='todo-div'>
-        <h1>{todo.id}</h1>
-        <h1>{todo.name}</h1>
-        <h1>{todo.url}</h1>
-        <h1>{todo.completed}</h1>
+        <div key={'todo' + index} className={completed}>
+        <h1 className={completed}>Name: {todo.name}</h1>
+        <p className={style.id}>Project's Id: {todo.id}</p>
+        <a href={style.url} className={style.url}>Link {todo.url}</a>
       </div>
       )
     }) 
@@ -48,7 +48,10 @@ class App extends React.Component {
 
     return (
       <div className={style.App}>
-        <div className='todos'>{todos}</div>
+        <div className={style.todos}>
+        <h1 className={style.mainTitle}>ToDos</h1>
+          {todos}
+        </div>
         <pre className={style.SwaggerDebug}>
         </pre>
       </div>
