@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import style from './App.css';
 
 class App extends React.Component {
@@ -9,31 +8,32 @@ class App extends React.Component {
 
     this.state = {
       todos:[]
-    }
+    };
   }
 
   async componentDidMount() {
     const todos = await this.getTodos();
-  }
+  };
 
   getTodos = async () => {
     const response = await fetch('https://api.awc.dance/codechallenge')
     const data = await response.json();
-    await this.addTodosToState(data)
-    return await data
-  }
+    await this.addTodosToState(data);
+    return await data;
+  };
 
   addTodosToState = (data) => {
-    const todos = data.map(todo => todo)
-    this.setState({todos})
+    const todos = data.map(todo => todo);
+    this.setState({todos});
   }
 
   displayTodos = () => {
     const todos = this.state.todos.map((todo, index) => {
-      const completed = todo.completed !== null ? style.tododiv : style.completed
+      const completed = todo.completed !== null ? style.tododiv : style.completed;
+      const completedText = todo.completed !== null ? style.completedText : style.noCompleted;
       return (
         <div key={'todo' + index} className={completed}>
-        <h1 className={completed}>Name: {todo.name}</h1>
+        <h1 className={completedText}>Name: {todo.name}</h1>
         <p className={style.id}>Project's Id: {todo.id}</p>
         <a href={style.url} className={style.url}>Link {todo.url}</a>
       </div>
@@ -44,8 +44,7 @@ class App extends React.Component {
 
   render() {
     const { swagger } = this.props;
-    const todos = this.displayTodos()
-
+    const todos = this.displayTodos();
     return (
       <div className={style.App}>
         <div className={style.todos}>

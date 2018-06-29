@@ -1,4 +1,5 @@
 .App {
+  margin:0;;
 }
 
 .SwaggerDebug {
@@ -9,11 +10,10 @@
 
 p{
   font-size: 14px;
-  color: white;
 }
 
 a{
-  color: white;
+  color: black;
 }
 
 h1{
@@ -29,11 +29,10 @@ h1{
 }
 
 .tododiv{
-  color: rgb(82, 9, 9);
   border-radius: 2px;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.253);
+  background-color: rgb(255, 255, 255);
   overflow: scroll;
 }
 
@@ -47,17 +46,24 @@ h1{
 }
 
 .completed{
-  color: rgb(3, 53, 3);
   border-radius: 2px;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.253);
+  background-color: rgb(255, 255, 255);
   overflow: scroll;
 }
 
 .mainTitle{
-  color: white;
   margin: 10px;
+  color: white;
+}
+
+.noCompleted{
+  color: rgb(82, 9, 9);
+}
+
+.completedText{
+  color: rgb(3, 53, 3);
 }
 
 
