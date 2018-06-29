@@ -1,3 +1,7 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .App {
   margin:0;;
 }
@@ -9,32 +13,60 @@
 }
 
 p{
-  font-size: 14px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #999;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
 }
 
 a{
-  color: black;
+  color: purple;
+  font-size: 0.9rem;
 }
 
 h1{
-  margin: 5px;
   font-weight: 400;
+  color: #888;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
+h2 {
+  color: #888;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.completed h2 {
+  text-decoration: line-through;
+}
+
+hr {
+  border-top: 1px dashed #ccc;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.header {
+  height: 70px;
+}
 
 .todos {
-  padding: 20px;
-  background-color: black;
+  padding: 0 20px 20px 20px;
+  background-color: #f8f8f8;
   overflow: scroll;
+  margin-top: -5px;
 }
 
 .tododiv{
   border-radius: 2px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: rgb(255, 255, 255);
-  overflow: scroll;
-  border: 3px solid rgb(128, 0, 21);
+  padding: 20px;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ccc;
+  border-radius: 5px;
 }
 
 .title{
@@ -47,25 +79,31 @@ h1{
 }
 
 .completed{
-  border-radius: 2px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-bottom: 15px;
   overflow: scroll;
-  border: 3px solid green;
+  padding: 20px;
+  margin-top: 15px;
+  background: #eee;
+  box-shadow: 1px 1px 1px #ccc;
 }
 
 .mainTitle{
-  margin: 10px;
-  color: white;
-}
-
-.noCompleted{
-  color: rgb(82, 9, 9);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  margin-left: 0;
+  border-radius: 0 0 0 3px;
+  background: purple;
+  box-shadow: 1px 1px 1px #ccc;
 }
 
 .completedText{
-  color: rgb(3, 53, 3);
+  color: #888;
+}
+
+.App__todos___1J-e9 {
+  background: #eee;
 }
 
 

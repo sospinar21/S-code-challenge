@@ -32,10 +32,13 @@ class App extends React.Component {
       const completed = todo.completed !== null ? style.tododiv : style.completed;
       const completedText = todo.completed !== null ? style.completedText : style.noCompleted;
       return (
+      <div>
         <div key={'todo' + index} className={completed}>
-        <h1 className={completedText}>Name: {todo.name}</h1>
-        <p className={style.id}>Project's Id: {todo.id}</p>
-        <a href={style.url} className={style.url}>Link {todo.url}</a>
+          <h2 className={completedText}>Name: {todo.name}</h2>
+          <p className={style.id}>Project's Id: {todo.id}</p>
+          <a href={style.url} className={style.url}>Link {todo.url}</a>
+        </div>
+        <hr/>
       </div>
       )
     }) 
@@ -47,8 +50,10 @@ class App extends React.Component {
     const todos = this.displayTodos();
     return (
       <div className={style.App}>
+        <div className={style.header}>
+          <h1 className={style.mainTitle}>ToDos</h1>
+        </div>
         <div className={style.todos}>
-        <h1 className={style.mainTitle}>ToDos</h1>
           {todos}
         </div>
         <pre className={style.SwaggerDebug}>
