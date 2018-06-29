@@ -34,6 +34,7 @@ h1{
   margin-bottom: 10px;
   background-color: rgb(255, 255, 255);
   overflow: scroll;
+  border: 3px solid rgb(128, 0, 21);
 }
 
 .title{
@@ -51,6 +52,7 @@ h1{
   margin-bottom: 10px;
   background-color: rgb(255, 255, 255);
   overflow: scroll;
+  border: 3px solid green;
 }
 
 .mainTitle{
